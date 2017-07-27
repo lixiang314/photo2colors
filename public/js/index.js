@@ -62,10 +62,13 @@ $('#pre-step').on('click',function(){
 $('#color-list').on('click','.div-color',function(){
   if ($(this).hasClass('selected')) {
     return;
+  } else {
+    var _newBox = '<div class="selected-box" style="background-color:' + $(this).attr("value") + ';"></div>';
+    alert(_newBox)
+    $('.preview').append(_newBox);
+      $(this).addClass('selected').html('<img src="img/icon-ok.png" alt="" class="title">');
   }
-  var _newBox = '<div class="selected-box" style="background-color:' + $(this).attr("value") + ';"></div>';
-  $('.preview').append(_newBox);
-    $(this).addClass('selected').html('<img src="img/icon-ok.png" alt="" class="title">');
+
 });
 
 // 重选
