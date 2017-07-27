@@ -10,7 +10,6 @@
 }
 body {
     background-color: rgb(220,231,234);
-    font-family: sans-serif;
     /* padding: 10px; */
 }
 .cover {
@@ -108,7 +107,8 @@ section {
     }
     > .btn-group {
         display: -webkit-flex;
-        display: -moz-box; /* 老版本语法: Firefox (buggy) */    display: -ms-flexbox; /* 混合版本语法: IE 10 */    display: display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+        display: -moz-box; /* 老版本语法: Firefox (buggy) */    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+        display: -webkit-flex; /* 新版本语法: Chrome 21+ */
         display: flex;
         justify-content: center;
         > img {
@@ -133,7 +133,8 @@ section {
     }
     > .btn-group {
       display: -webkit-flex;
-      display: -moz-box; /* 老版本语法: Firefox (buggy) */    display: -ms-flexbox; /* 混合版本语法: IE 10 */    display: display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+      display: -moz-box; /* 老版本语法: Firefox (buggy) */    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+      display: -webkit-flex; /* 新版本语法: Chrome 21+ */
         display: flex;
         justify-content: center;
         > img {
@@ -162,12 +163,11 @@ section {
     width: 100%;
     height: 100px;
     display: -webkit-flex;
-    display: -moz-box; /* 老版本语法: Firefox (buggy) */    display: -ms-flexbox; /* 混合版本语法: IE 10 */    display: display: -webkit-flex; /* 新版本语法: Chrome 21+ */
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     > .selected-box {
-        width: 50%;
+        width: 100%;
         height: 100px;
     }
 }
