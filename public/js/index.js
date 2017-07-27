@@ -14,6 +14,7 @@ function loadingOk() {
   $('.cover').hide();
   $('.sec-1').hide();
   $('.sec-2').show();
+  $('.preview').html('');
 
 }
 function showColor() {
@@ -65,11 +66,10 @@ $('#color-list').on('click','.div-color',function(){
     return;
   } else {
     var _newBox = '<div class="selected-box" style="background:' + _value + ';"></div>';
-    var _newBox1 = '<div class="selected-box selected-box-1" style="background:'+_value+';" value="'+_value+'"></div>';
+
     if($('.preview').html()=='') {
-      $('.preview').html(_newBox1);
+      $('.preview').html(_newBox);
     } else {
-      $('.selected-box-1').css('background',$('.selected-box-1').attr('value'));
       $('.preview').append(_newBox);
     }
       $(this).addClass('selected').html('<img src="img/icon-ok.png" alt="" class="title">');
