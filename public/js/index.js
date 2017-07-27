@@ -80,7 +80,7 @@ $('#color-list').on('click','.div-color',function(){
 
 // 重选
 $('.btn-reset').on('click',function() {
-  $('.preview').html('');
+  $('.preview').empty();
   $('.div-color').html('').removeClass('selected');
 })
 
