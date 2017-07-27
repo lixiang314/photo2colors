@@ -40,6 +40,10 @@ function showColor() {
 
       }
       $('#color-list').html(colorList.join('\n'));
+
+
+        $('.preview').append('<div class="selected-box" style="background:' + colors.dominant + ';"></div>');
+        $('.preview').append('<div class="selected-box" style="background:' + colors.secondary + ';"></div>');
       // console.log("-----------------------------------------------");
       // console.log("rgbaster.js");
       // console.log("-----------------------------------------------");
@@ -67,13 +71,10 @@ $('#color-list').on('click','.div-color',function(){
   } else {
     var _newBox = '<div class="selected-box" style="background:' + _value + ';"></div>';
 
-    if($('.preview').html()=='') {
-      $('.preview').html(_newBox);
-    } else {
       $('.preview').append(_newBox);
     }
       $(this).addClass('selected').html('<img src="img/icon-ok.png" alt="" class="title">');
-  }
+
 
 });
 
