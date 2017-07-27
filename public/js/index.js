@@ -64,8 +64,11 @@ $('#color-list').on('click','.div-color',function(){
     return;
   } else {
     var _newBox = '<div class="selected-box" style="background-color:' + $(this).attr("value") + ';"></div>';
-    alert(_newBox)
-    $('.preview').append(_newBox);
+    if($('.preview').html()='') {
+      $('.preview').html(_newBox);
+    } else {
+      $('.preview').append(_newBox);
+    }
       $(this).addClass('selected').html('<img src="img/icon-ok.png" alt="" class="title">');
   }
 
