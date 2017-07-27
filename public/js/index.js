@@ -5,7 +5,7 @@ $("#input-img").uploadPreview({
     $('.cover').show();
     var _src = $('#img-show').attr('src');
     console.log(_src);
-    $('.img-main').css('background','url("'+_src+'") no-repeat center').css('backgroundSize','cover');
+    $('.img-main').css('background', 'url("' + _src + '") no-repeat center').css('backgroundSize', 'cover');
     showColor();
   }
 });
@@ -17,6 +17,7 @@ function loadingOk() {
   $('.preview').html('');
 
 }
+
 function showColor() {
   var img = document.getElementById('img-show');
   var colors = RGBaster.colors(img, {
@@ -41,9 +42,9 @@ function showColor() {
       }
       $('#color-list').html(colorList.join('\n'));
 
-
-        $('.preview').append('<div class="selected-box" style="background:' + colors.dominant + ';"></div>');
-        $('.preview').append('<div class="selected-box" style="background:' + colors.secondary + ';"></div>');
+      //
+      // $('.preview').append('<div class="selected-box" style="background:' + colors.dominant + ';"></div>');
+      // $('.preview').append('<div class="selected-box" style="background:' + colors.secondary + ';"></div>');
       // console.log("-----------------------------------------------");
       // console.log("rgbaster.js");
       // console.log("-----------------------------------------------");
@@ -59,36 +60,40 @@ function showColor() {
 }
 
 
-$('#pre-step').on('click',function(){
+$('#pre-step').on('click', function() {
   $('.sec-3').hide();
   $('.sec-2').show();
 })
 
-$('#color-list').on('click','.div-color',function(){
+$('#color-list').on('click', '.div-color', function() {
   var _value = $(this).attr("value");
   if ($(this).hasClass('selected')) {
     return;
   } else {
     var _newBox = '<div class="selected-box" style="background:' + _value + ';"></div>';
 
+    if ($('.preview-1').html() == '') {
+      $('.preview').hide().show().append(_newBox);
+    } else {
       $('.preview').append(_newBox);
     }
-      $(this).addClass('selected').html('<img src="img/icon-ok.png" alt="" class="title">');
 
+    $(this).addClass('selected').html('<img src="img/icon-ok.png" alt="" class="title">');
+  }
 
 });
 
 // 重选
-$('.btn-reset').on('click',function() {
+$('.btn-reset').on('click', function() {
   $('.preview').empty();
   $('.div-color').html('').removeClass('selected');
 })
 
-$('.btn-next').on('click',function() {
+$('.btn-next').on('click', function() {
   $('.sec-2').hide();
   $('.sec-3').show();
 })
-$('#btn-again').on('click',function() {
+$('#btn-again').on('click', function() {
   $('.sec-3').hide();
   $('.sec-2').hide();
   $('.sec-1').show();
