@@ -60,13 +60,16 @@ $('#pre-step').on('click',function(){
 })
 
 $('#color-list').on('click','.div-color',function(){
+  var _value = $(this).attr("value");
   if ($(this).hasClass('selected')) {
     return;
   } else {
-    var _newBox = '<div class="selected-box" style="background:' + $(this).attr("value") + ';"></div>';
+    var _newBox = '<div class="selected-box" style="background:' + _value + ';"></div>';
+    var _newBox1 = '<div class="selected-box selected-box-1" style="background:'+_value+';" value="'+_value+'"></div>';
     if($('.preview').html()=='') {
-      $('.preview').html(_newBox);
+      $('.preview').html(_newBox1);
     } else {
+      $('.selected-box-1').css('background',$('.selected-box-1').attr('value'));
       $('.preview').append(_newBox);
     }
       $(this).addClass('selected').html('<img src="img/icon-ok.png" alt="" class="title">');
