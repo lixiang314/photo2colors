@@ -5,23 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/index.css">
-  <title>Document</title>
+  <title>照片调色盘Lite</title>
 </head>
 <body>
+<div class="cover">
+
+  <div class="gif">
+    <img src="img/loading3.gif" alt="">
+  </div>
+</div>
   <section class="sec-1">
-    <p>第一步，选择一张图片:</p>
-    <input class="file-upload" type="file"  name="input-img" id="input-img">
+    <img src="img/text1.png" alt="" class="title">
+
+    <div class="btn-photo">
+      <img src="img/btn-photo.png" alt="">
+      <input class="file-upload" type="file"  name="input-img" id="input-img">
+    </div>
+    <div class="text">
+      <p>TIPS:</p>
+      <p>1. 不要选太丑的图。</p>
+      <p>2. 为了最佳效果，建议选择正方形的照片。</p>
+      <p>3. 就算你不选择正方形照片，我也会在最后强行裁剪成正方形。我不管。</p>
+      <p>4. 本网站不会储存你的照片（云存储不要钱啊），所以请放心上传<span>羞羞的</span>照片（逃</p>
+    </div>
   </section>
 
-  <section class="sec-2">
-    <p>第二步，选择4-8个颜色：</p>
-    <div id="color-list"></div>
+  <section class="sec-2 sec-ctive">
+    <img src="img/text2.png" alt="" class="title">
+    <div class="preview">
+
+    </div>
+    <p>(可以上下滑动)</p>
+    <div id="color-list">
+      <div class="div-color"></div>
+
+    </div>
+      <div class="btn-group">
+        <img src="img/btn-reset.png" alt="" class="btn-reset">
+      <img src="img/btn-ok.png" alt="" class="btn-next">
+      </div>
   </section>
 
   <section class="sec-3">
-    <p>第三步，截图吧！</p>
-    <img src="img/456.jpg" alt="" id="img-show" width="100px">
-    <div id="color-list"></div>
+
+    <img src="img/text3.png" alt="" class="title">
+    <div class="btn-group">
+      <img src="img/pre-step.png" alt="" id="pre-step">
+      <img src="img/btn-again.png" alt="" id="btn-again">
+    </div>
+    <p>截图后，把以下部分裁切出来即可。</p>
+    <div class="cut-this">
+      <div class="img-main">
+        <img src="img/test1.jpg" alt="" id="img-show">
+      </div>
+
+      <div>
+        <div class="preview preview-2">
+        </div>
+      </div>
+    </div>
+
+
+
   </section>
 
 
