@@ -64,7 +64,7 @@ $('#color-list').on('click','.div-color',function(){
     return;
   } else {
     var _newBox = '<div class="selected-box" style="background-color:' + $(this).attr("value") + ';"></div>';
-    if($('.preview').html()='') {
+    if($('.preview').html()=='') {
       $('.preview').html(_newBox);
     } else {
       $('.preview').append(_newBox);
