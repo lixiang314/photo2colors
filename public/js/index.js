@@ -63,7 +63,7 @@ $('#color-list').on('click','.div-color',function(){
   if ($(this).hasClass('selected')) {
     return;
   } else {
-    var _newBox = '<div class="selected-box" style="background-color:' + $(this).attr("value") + ';"></div>';
+    var _newBox = '<div class="selected-box" style="background:' + $(this).attr("value") + ';"></div>';
     if($('.preview').html()=='') {
       $('.preview').html(_newBox);
     } else {
